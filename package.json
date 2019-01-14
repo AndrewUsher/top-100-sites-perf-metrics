@@ -1,0 +1,7 @@
+{
+  "name": "top-100-sites-perf-metrics",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Andrew Usher <andrewusher00@gmail.com>",
+  "license": "MIT"
+}
