@@ -7,17 +7,13 @@ const REPORT_SUMMARY = 'summary.json'
 const JSON_EXT = '.report.json'
 const HTML_EXT = '.report.html'
 
-execute.OUT = OUT
-
 function execute(options) {
-  const out = options.out || OUT
-  const lhc = lighthouseCmd(options)
-  const summaryPath = `${out}/${REPORT_SUMMARY}`
+  const summaryPath = `${OUT}/${REPORT_SUMMARY}`
 
   log = log.bind(log, options.verbose || false)
 
-  rm('-rf', out)
-  mkdir('-p', out)
+  rm('-rf', OUT)
+  mkdir('-p', OUT)
 
   const count = options.sites.length
   log(`Lighthouse batch run begin for ${count} site${count > 1 ? 's' : ''}`)
@@ -25,7 +21,7 @@ function execute(options) {
   const reports = sitesInfo(options).map((site, i) => {
     const prefix = `${i + 1}/${count}: `
     const htmlOut = options.html ? ' --output html' : ''
-    const filePath = `${out}/${site.file}`
+    const filePath = `${OUT}/${site.file}`
     // if gen'ing html+json reports, ext '.report.json' is added by lighthouse cli automatically,
     // so here we try and keep the file names consistent by stripping to avoid duplication
     const outputPath = options.html
@@ -77,7 +73,6 @@ function sitesInfo(options) {
   })
 }
 
-
 function siteName(site) {
   return site.replace(/^https?:\/\//, '').replace(/[\/\?#:\*\$@\!\.]/g, '_')
 }
@@ -123,10 +118,6 @@ program
     ''
   )
   .option('-h, --html', 'generate an html report alongside the json report')
-  .option(
-    '-o, --out [out]',
-    `the output folder to place reports, defaults to '${execute.OUT}'`
-  )
   .option(
     '-g, --use-global',
     'use a global lighthouse install instead of the dependency version'
