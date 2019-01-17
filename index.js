@@ -4,11 +4,6 @@ import { VictoryChart, VictoryTheme, VictoryLine } from 'victory'
 import stats from './stats'
 import COLORS from './colors'
 
-VictoryChart.defaultProps = {
-  ...VictoryChart.defaultProps,
-  animate: true
-}
-
 const Charts = () => (
   <>
     <h1>Top 100 Websites Performance</h1>
