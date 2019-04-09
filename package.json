@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "chrome-launcher": "^0.10.5",
-    "lighthouse": "^4.0.0-alpha.2-3.2.1",
+    "lighthouse": "^4.3.0",
     "puppeteer": "^1.11.0",
     "react": "^16.0.0",
     "react-dom": "^16.7.0",
