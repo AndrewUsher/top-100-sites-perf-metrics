@@ -32,7 +32,7 @@
     "chrome-launcher": "^0.10.5",
     "lighthouse": "^4.0.0-alpha.2-3.2.1",
     "puppeteer": "^1.11.0",
-    "react": "^16.0.0",
+    "react": "^16.9.0",
     "react-dom": "^16.7.0",
     "shelljs": "^0.8.3",
     "victory": "^31.1.0"
