@@ -8,7 +8,7 @@
     "dev": "parcel index.html"
   },
   "devDependencies": {
-    "@babel/core": "^7.2.2",
+    "@babel/core": "^7.7.5",
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
     "commander": "^2.19.0",
